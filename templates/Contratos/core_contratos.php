@@ -234,10 +234,14 @@ $arreglo=[];
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($arreglo as $a): ?>
+                    <?php 
+                    $total=0;
+                    foreach ($arreglo as $a): ?>
                     <tr>
                         <td><?= $this->Html->link(__($a[0]), ['controller' => 'Cliente','action'=>'view',$a[0]]) ?></td>
+                        
                         <td><?= $a[1] ?></td>
+                        <?php $total=$total+$a[1];?>
                         <td>
                             <?php $i=0?>
                             <?php foreach($a as $b):
@@ -254,6 +258,10 @@ $arreglo=[];
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <br>
+            <?php 
+            echo 'TOTAL:                $',$total;
+            ?>
 
     <?php }?>
 </div>
