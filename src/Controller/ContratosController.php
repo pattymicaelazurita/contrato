@@ -30,15 +30,7 @@ class ContratosController extends AppController
         $this->set(compact('contratos'));
         
     }
-
-    public function identificador()
-    {
-        $contratos = $this->paginate($this->Contratos);
-
-        $this->set(compact('contratos'));
-        
-    }
-
+    
     /**
      * View method
      *
