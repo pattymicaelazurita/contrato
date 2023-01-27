@@ -78,43 +78,7 @@ return [
         'salt' => env('SECURITY_SALT'),
     ],
 
-    'Datasources' => [
-        'default' => [
-            /*$db_host = "us-cdbr-east-06.cleardb.net",
-            $db_user = "bcb1f60671c265",
-            $db_pass = "dd0b2014",
-            $db_name = "heroku_1d10c600d20c950",*/
-            
-            'host' => 'us-cdbr-east-06.cleardb.net',
-            
-            'port' => '3306',
-
-            'username' => 'bcb1f60671c265',
-            'password' => 'dd0b2014',
-
-            'database' => 'heroku_1d10c600d20c950',
-            
-            
-            /*'host' => 'localhost',
-            
-            'port' => '3308',
-
-            'username' => 'root',
-            'password' => '',
-
-            'database' => 'mini_core',*/
-            /*
-             * If not using the default 'public' schema with the PostgreSQL driver
-             * set it here.
-             */
-            //'schema' => 'myapp',
-
-            /*
-             * You can use a DSN string to set the entire configuration
-             */
-            'url' => env('DATABASE_URL', null),
-        ],
-    ],
+    
 
     /*
      * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -331,10 +295,38 @@ return [
          * in app_local.php depending on the applications needs.
          */
         'default' => [
-            'className' => Connection::class,
+            'host' => 'us-cdbr-east-06.cleardb.net',
+            
+            'port' => '3306',
+
+            'username' => 'bcb1f60671c265',
+            'password' => 'dd0b2014',
+
+            'database' => 'heroku_1d10c600d20c950',
+            
+            
+            /*'host' => 'localhost',
+            
+            'port' => '3308',
+
+            'username' => 'root',
+            'password' => '',
+
+            'database' => 'mini_core',*/
+            /*
+             * If not using the default 'public' schema with the PostgreSQL driver
+             * set it here.
+             */
+            //'schema' => 'myapp',
+
+            /*
+             * You can use a DSN string to set the entire configuration
+             */
+            'url' => env('DATABASE_URL', null),
+            /*'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
-            'timezone' => 'UTC',
+            'timezone' => 'UTC',*/
 
             /*
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
@@ -346,9 +338,9 @@ return [
              * then you MUST use the `flags` config to set your charset encoding.
              * For e.g. `'flags' => [\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4']`
              */
-            'flags' => [],
+            /*'flags' => [],
             'cacheMetadata' => true,
-            'log' => false,
+            'log' => false,*/
 
             /*
              * Set identifier quoting to true if you are using reserved words or
@@ -357,8 +349,8 @@ return [
              * identifiers quoted when creating SQL. It should be noted that this
              * decreases performance because each query needs to be traversed and
              * manipulated before being executed.
-             */
-            'quoteIdentifiers' => false,
+             
+            'quoteIdentifiers' => false,*/
 
             /*
              * During development, if using MySQL < 5.6, uncommenting the
