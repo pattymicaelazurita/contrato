@@ -297,7 +297,7 @@ return [
         'default' => [
             'host' => 'us-cdbr-east-06.cleardb.net',
             
-            'port' => '3306',
+            /*'port' => '3306',*/
 
             'username' => 'bcb1f60671c265',
             'password' => 'dd0b2014',
