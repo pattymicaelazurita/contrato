@@ -78,6 +78,44 @@ return [
         'salt' => env('SECURITY_SALT'),
     ],
 
+    'Datasources' => [
+        'default' => [
+            /*$db_host = "us-cdbr-east-06.cleardb.net",
+            $db_user = "bcb1f60671c265",
+            $db_pass = "dd0b2014",
+            $db_name = "heroku_1d10c600d20c950",*/
+            
+            'host' => 'us-cdbr-east-06.cleardb.net',
+            
+            'port' => '3306',
+
+            'username' => 'bcb1f60671c265',
+            'password' => 'dd0b2014',
+
+            'database' => 'heroku_1d10c600d20c950',
+            
+            
+            /*'host' => 'localhost',
+            
+            'port' => '3308',
+
+            'username' => 'root',
+            'password' => '',
+
+            'database' => 'mini_core',*/
+            /*
+             * If not using the default 'public' schema with the PostgreSQL driver
+             * set it here.
+             */
+            //'schema' => 'myapp',
+
+            /*
+             * You can use a DSN string to set the entire configuration
+             */
+            'url' => env('DATABASE_URL', null),
+        ],
+    ],
+
     /*
      * Apply timestamps with the last modified time to static assets (js, css, images).
      * Will append a querystring parameter containing the time the file was modified.
